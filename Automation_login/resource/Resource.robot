@@ -30,8 +30,7 @@ Clicar no botão entrar
     Click Element           xpath=//i[contains(@class,'fa fa-2x fa-sign-in')]
 
 Conferir se está na área logada
-   Page Should Contain Element     xpath=//*[@id="content"]/div/h2/i
-
+   Page Should Contain Element     xpath=//div[contains(@class,'flash success')]
 
 Dado que acesso a página de login
     Acessar a página home do site
