@@ -58,13 +58,3 @@ Quando submeto a senha incorreta
 
 Então devo receber um alerta: "Senha é invalida!"
     Page Should Contain Element     xpath=//div[contains(@class,'flash error')]
-
-
-
-
-
-
-
-
-
-

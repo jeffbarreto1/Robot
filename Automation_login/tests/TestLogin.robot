@@ -19,7 +19,3 @@ Caso de Teste 03: Senha inválida!
     Dado que acesso a página de login
     Quando submeto a senha incorreta
     Então devo receber um alerta: "Senha é invalida!"
-
-
-
-
