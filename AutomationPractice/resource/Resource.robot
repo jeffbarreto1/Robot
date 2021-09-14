@@ -15,7 +15,7 @@ Fechar navegador
 
 #Teste passo-a-passo
 Acessar a página home do site
-    Go To               http://automationpractice.com
+    Go To               ${URL}
     Title Should Be     My Store
 
 Digitar o nome do produto "${PRODUTO}" no campo pesquisa
