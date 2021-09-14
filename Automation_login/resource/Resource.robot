@@ -1,11 +1,14 @@
 *** Settings ***
 Library         SeleniumLibrary
+Library         FakerLibrary
 
 *** Variables ***
-${URL}          https://training-wheels-protocol.herokuapp.com/login
-${BROWSER}      chrome
-${LOGIN}        stark
-${PASSWORD}     jarvis!
+${URL}              https://training-wheels-protocol.herokuapp.com/login
+${BROWSER}          chrome
+${LOGIN}            stark
+${PASSWORD}         jarvis!
+${FAKENAME}         FakerLibrary.Name
+${PASSWORDFAKE}     FakerLibrary.Password
 
 *** Keywords ***
 #Setup e Teardown
@@ -44,7 +47,7 @@ Então devo ser direcionado para área logada
     Conferir se está na área logada
 
 Quando submeto um login não cadastrado
-    Input Text              id=userId   Jeff
+    Input Text              id=userId   ${FAKENAME}
     Input Password          id=passId   ${PASSWORD}
     Clicar no botão entrar
 
@@ -53,7 +56,7 @@ Então devo receber um alerta: "O usuário informado não está cadastrado!"
 
 Quando submeto a senha incorreta
     Input Text              id=userId   ${LOGIN}
-    Input Password          id=passId   asd123
+    Input Password          id=passId   ${PASSWORDFAKE}
     Clicar no botão entrar
 
 Então devo receber um alerta: "Senha é invalida!"
