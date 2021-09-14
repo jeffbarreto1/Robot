@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20210914 15:21:18.562" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20210914 16:05:03.472" rpa="false" schemaversion="2">
 <suite id="s1" name="TestLogin" source="C:\Users\SUPORTE IN9MÍDIA\Documents\Jefferson\Robot\Automation_login\tests\TestLogin.robot">
 <test id="s1-t1" name="Caso de Teste 01: Realizar login">
 <kw name="Abrir navegador" library="Resource" type="SETUP">
@@ -7,28 +7,28 @@
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210914 15:21:18.913" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20210914 15:21:18.912" endtime="20210914 15:21:20.841"/>
+<msg timestamp="20210914 16:05:03.835" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210914 16:05:03.835" endtime="20210914 16:05:05.840"/>
 </kw>
-<status status="PASS" starttime="20210914 15:21:18.911" endtime="20210914 15:21:20.842"/>
+<status status="PASS" starttime="20210914 16:05:03.834" endtime="20210914 16:05:05.841"/>
 </kw>
 <kw name="Dado que acesso a página de login" library="Resource">
 <kw name="Acessar a página home do site" library="Resource">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20210914 15:21:20.846" level="INFO">Opening url 'https://training-wheels-protocol.herokuapp.com/login'</msg>
-<status status="PASS" starttime="20210914 15:21:20.845" endtime="20210914 15:21:24.523"/>
+<msg timestamp="20210914 16:05:05.846" level="INFO">Opening url 'https://training-wheels-protocol.herokuapp.com/login'</msg>
+<status status="PASS" starttime="20210914 16:05:05.845" endtime="20210914 16:05:09.039"/>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <arg>xpath=//i[contains(.,'Login')]</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20210914 15:21:24.545" level="INFO">Current page contains element 'xpath=//i[contains(.,'Login')]'.</msg>
-<status status="PASS" starttime="20210914 15:21:24.524" endtime="20210914 15:21:24.545"/>
+<msg timestamp="20210914 16:05:09.058" level="INFO">Current page contains element 'xpath=//i[contains(.,'Login')]'.</msg>
+<status status="PASS" starttime="20210914 16:05:09.039" endtime="20210914 16:05:09.058"/>
 </kw>
-<status status="PASS" starttime="20210914 15:21:20.844" endtime="20210914 15:21:24.546"/>
+<status status="PASS" starttime="20210914 16:05:05.845" endtime="20210914 16:05:09.058"/>
 </kw>
-<status status="PASS" starttime="20210914 15:21:20.843" endtime="20210914 15:21:24.546"/>
+<status status="PASS" starttime="20210914 16:05:05.844" endtime="20210914 16:05:09.058"/>
 </kw>
 <kw name="Quando submeto meu login e senha" library="Resource">
 <kw name="Digitar o login no campo &quot;Usuário&quot;" library="Resource">
@@ -36,65 +36,215 @@
 <arg>id=userId</arg>
 <arg>${LOGIN}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210914 15:21:24.549" level="INFO">Typing text 'stark' into text field 'id=userId'.</msg>
-<status status="PASS" starttime="20210914 15:21:24.549" endtime="20210914 15:21:24.670"/>
+<msg timestamp="20210914 16:05:09.062" level="INFO">Typing text 'stark' into text field 'id=userId'.</msg>
+<status status="PASS" starttime="20210914 16:05:09.061" endtime="20210914 16:05:09.172"/>
 </kw>
-<status status="PASS" starttime="20210914 15:21:24.548" endtime="20210914 15:21:24.671"/>
+<status status="PASS" starttime="20210914 16:05:09.061" endtime="20210914 16:05:09.172"/>
 </kw>
 <kw name="Digitar o senha no campo &quot;Password&quot;" library="Resource">
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id=passId</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20210914 15:21:24.673" level="INFO">Typing password into text field 'id=passId'.</msg>
-<msg timestamp="20210914 15:21:24.733" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20210914 15:21:24.795" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20210914 15:21:24.672" endtime="20210914 15:21:24.796"/>
+<msg timestamp="20210914 16:05:09.173" level="INFO">Typing password into text field 'id=passId'.</msg>
+<msg timestamp="20210914 16:05:09.229" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210914 16:05:09.291" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210914 16:05:09.173" endtime="20210914 16:05:09.291"/>
 </kw>
-<status status="PASS" starttime="20210914 15:21:24.671" endtime="20210914 15:21:24.796"/>
+<status status="PASS" starttime="20210914 16:05:09.172" endtime="20210914 16:05:09.291"/>
 </kw>
 <kw name="Clicar no botão entrar" library="Resource">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//i[contains(@class,'fa fa-2x fa-sign-in')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210914 15:21:24.797" level="INFO">Clicking element 'xpath=//i[contains(@class,'fa fa-2x fa-sign-in')]'.</msg>
-<status status="PASS" starttime="20210914 15:21:24.797" endtime="20210914 15:21:25.654"/>
+<msg timestamp="20210914 16:05:09.293" level="INFO">Clicking element 'xpath=//i[contains(@class,'fa fa-2x fa-sign-in')]'.</msg>
+<status status="PASS" starttime="20210914 16:05:09.292" endtime="20210914 16:05:09.863"/>
 </kw>
-<status status="PASS" starttime="20210914 15:21:24.796" endtime="20210914 15:21:25.654"/>
+<status status="PASS" starttime="20210914 16:05:09.292" endtime="20210914 16:05:09.863"/>
 </kw>
-<status status="PASS" starttime="20210914 15:21:24.547" endtime="20210914 15:21:25.654"/>
+<status status="PASS" starttime="20210914 16:05:09.059" endtime="20210914 16:05:09.864"/>
 </kw>
 <kw name="Então devo ser direcionado para área logada" library="Resource">
 <kw name="Conferir se está na área logada" library="Resource">
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>xpath=//*[@id="content"]/div/h2/i</arg>
+<arg>xpath=//div[contains(@class,'flash success')]</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20210914 15:21:25.676" level="INFO">Current page contains element 'xpath=//*[@id="content"]/div/h2/i'.</msg>
-<status status="PASS" starttime="20210914 15:21:25.658" endtime="20210914 15:21:25.676"/>
+<msg timestamp="20210914 16:05:09.887" level="INFO">Current page contains element 'xpath=//div[contains(@class,'flash success')]'.</msg>
+<status status="PASS" starttime="20210914 16:05:09.867" endtime="20210914 16:05:09.887"/>
 </kw>
-<status status="PASS" starttime="20210914 15:21:25.657" endtime="20210914 15:21:25.677"/>
+<status status="PASS" starttime="20210914 16:05:09.867" endtime="20210914 16:05:09.887"/>
 </kw>
-<status status="PASS" starttime="20210914 15:21:25.656" endtime="20210914 15:21:25.677"/>
+<status status="PASS" starttime="20210914 16:05:09.865" endtime="20210914 16:05:09.887"/>
 </kw>
 <kw name="Fechar navegador" library="Resource" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210914 15:21:25.678" endtime="20210914 15:21:27.953"/>
+<status status="PASS" starttime="20210914 16:05:09.889" endtime="20210914 16:05:12.148"/>
 </kw>
-<status status="PASS" starttime="20210914 15:21:25.677" endtime="20210914 15:21:27.954"/>
+<status status="PASS" starttime="20210914 16:05:09.888" endtime="20210914 16:05:12.149"/>
 </kw>
-<status status="PASS" starttime="20210914 15:21:18.910" endtime="20210914 15:21:27.955"/>
+<status status="PASS" starttime="20210914 16:05:03.833" endtime="20210914 16:05:12.150"/>
 </test>
-<status status="PASS" starttime="20210914 15:21:18.565" endtime="20210914 15:21:27.963"/>
+<test id="s1-t2" name="Caso de Teste 02: Usuário não cadastrado">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210914 16:05:12.166" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210914 16:05:12.164" endtime="20210914 16:05:13.855"/>
+</kw>
+<status status="PASS" starttime="20210914 16:05:12.161" endtime="20210914 16:05:13.856"/>
+</kw>
+<kw name="Dado que acesso a página de login" library="Resource">
+<kw name="Acessar a página home do site" library="Resource">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210914 16:05:13.860" level="INFO">Opening url 'https://training-wheels-protocol.herokuapp.com/login'</msg>
+<status status="PASS" starttime="20210914 16:05:13.860" endtime="20210914 16:05:19.321"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=//i[contains(.,'Login')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210914 16:05:19.353" level="INFO">Current page contains element 'xpath=//i[contains(.,'Login')]'.</msg>
+<status status="PASS" starttime="20210914 16:05:19.322" endtime="20210914 16:05:19.353"/>
+</kw>
+<status status="PASS" starttime="20210914 16:05:13.858" endtime="20210914 16:05:19.353"/>
+</kw>
+<status status="PASS" starttime="20210914 16:05:13.858" endtime="20210914 16:05:19.354"/>
+</kw>
+<kw name="Quando submeto um login não cadastrado" library="Resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=userId</arg>
+<arg>Jeff</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210914 16:05:19.355" level="INFO">Typing text 'Jeff' into text field 'id=userId'.</msg>
+<status status="PASS" starttime="20210914 16:05:19.355" endtime="20210914 16:05:19.470"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=passId</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20210914 16:05:19.471" level="INFO">Typing password into text field 'id=passId'.</msg>
+<msg timestamp="20210914 16:05:19.527" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210914 16:05:19.588" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210914 16:05:19.470" endtime="20210914 16:05:19.589"/>
+</kw>
+<kw name="Clicar no botão entrar" library="Resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//i[contains(@class,'fa fa-2x fa-sign-in')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210914 16:05:19.590" level="INFO">Clicking element 'xpath=//i[contains(@class,'fa fa-2x fa-sign-in')]'.</msg>
+<status status="PASS" starttime="20210914 16:05:19.589" endtime="20210914 16:05:20.189"/>
+</kw>
+<status status="PASS" starttime="20210914 16:05:19.589" endtime="20210914 16:05:20.190"/>
+</kw>
+<status status="PASS" starttime="20210914 16:05:19.354" endtime="20210914 16:05:20.190"/>
+</kw>
+<kw name="Então devo receber um alerta: &quot;O usuário informado não está cadastrado!&quot;" library="Resource">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'flash error')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210914 16:05:20.211" level="INFO">Current page contains element 'xpath=//div[contains(@class,'flash error')]'.</msg>
+<status status="PASS" starttime="20210914 16:05:20.192" endtime="20210914 16:05:20.211"/>
+</kw>
+<status status="PASS" starttime="20210914 16:05:20.191" endtime="20210914 16:05:20.211"/>
+</kw>
+<kw name="Fechar navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210914 16:05:20.214" endtime="20210914 16:05:22.529"/>
+</kw>
+<status status="PASS" starttime="20210914 16:05:20.212" endtime="20210914 16:05:22.530"/>
+</kw>
+<status status="PASS" starttime="20210914 16:05:12.157" endtime="20210914 16:05:22.531"/>
+</test>
+<test id="s1-t3" name="Caso de Teste 03: Senha inválida!">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210914 16:05:22.545" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210914 16:05:22.543" endtime="20210914 16:05:24.342"/>
+</kw>
+<status status="PASS" starttime="20210914 16:05:22.541" endtime="20210914 16:05:24.343"/>
+</kw>
+<kw name="Dado que acesso a página de login" library="Resource">
+<kw name="Acessar a página home do site" library="Resource">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210914 16:05:24.347" level="INFO">Opening url 'https://training-wheels-protocol.herokuapp.com/login'</msg>
+<status status="PASS" starttime="20210914 16:05:24.347" endtime="20210914 16:05:29.541"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=//i[contains(.,'Login')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210914 16:05:29.567" level="INFO">Current page contains element 'xpath=//i[contains(.,'Login')]'.</msg>
+<status status="PASS" starttime="20210914 16:05:29.542" endtime="20210914 16:05:29.567"/>
+</kw>
+<status status="PASS" starttime="20210914 16:05:24.345" endtime="20210914 16:05:29.567"/>
+</kw>
+<status status="PASS" starttime="20210914 16:05:24.344" endtime="20210914 16:05:29.568"/>
+</kw>
+<kw name="Quando submeto a senha incorreta" library="Resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=userId</arg>
+<arg>${LOGIN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210914 16:05:29.569" level="INFO">Typing text 'stark' into text field 'id=userId'.</msg>
+<status status="PASS" starttime="20210914 16:05:29.568" endtime="20210914 16:05:29.683"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=passId</arg>
+<arg>asd123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20210914 16:05:29.684" level="INFO">Typing password into text field 'id=passId'.</msg>
+<msg timestamp="20210914 16:05:29.738" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210914 16:05:29.801" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210914 16:05:29.683" endtime="20210914 16:05:29.802"/>
+</kw>
+<kw name="Clicar no botão entrar" library="Resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//i[contains(@class,'fa fa-2x fa-sign-in')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210914 16:05:29.803" level="INFO">Clicking element 'xpath=//i[contains(@class,'fa fa-2x fa-sign-in')]'.</msg>
+<status status="PASS" starttime="20210914 16:05:29.803" endtime="20210914 16:05:30.356"/>
+</kw>
+<status status="PASS" starttime="20210914 16:05:29.802" endtime="20210914 16:05:30.356"/>
+</kw>
+<status status="PASS" starttime="20210914 16:05:29.568" endtime="20210914 16:05:30.357"/>
+</kw>
+<kw name="Então devo receber um alerta: &quot;Senha é invalida!&quot;" library="Resource">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'flash error')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210914 16:05:30.383" level="INFO">Current page contains element 'xpath=//div[contains(@class,'flash error')]'.</msg>
+<status status="PASS" starttime="20210914 16:05:30.360" endtime="20210914 16:05:30.383"/>
+</kw>
+<status status="PASS" starttime="20210914 16:05:30.359" endtime="20210914 16:05:30.384"/>
+</kw>
+<kw name="Fechar navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210914 16:05:30.386" endtime="20210914 16:05:32.676"/>
+</kw>
+<status status="PASS" starttime="20210914 16:05:30.385" endtime="20210914 16:05:32.677"/>
+</kw>
+<status status="PASS" starttime="20210914 16:05:22.538" endtime="20210914 16:05:32.678"/>
+</test>
+<status status="PASS" starttime="20210914 16:05:03.474" endtime="20210914 16:05:32.686"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TestLogin">TestLogin</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="TestLogin">TestLogin</stat>
 </suite>
 </statistics>
 <errors>
