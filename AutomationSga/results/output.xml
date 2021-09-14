@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20210914 08:28:12.452" rpa="false" schemaversion="2">
+<suite id="s1" name="TestProceduralPractice sga" source="C:\Users\SUPORTE IN9MÍDIA\Documents\Jefferson\Robot\AutomationSga\tests\TestProceduralPractice_sga.robot">
+<test id="s1-t1" name="Caso de Teste 01: Realizar login">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210914 08:28:12.813" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210914 08:28:12.812" endtime="20210914 08:28:15.270"/>
+</kw>
+<status status="PASS" starttime="20210914 08:28:12.812" endtime="20210914 08:28:15.271"/>
+</kw>
+<kw name="Acessar a página home do site" library="Resource">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210914 08:28:15.273" level="INFO">Opening url 'http://192.168.1.2:8888/sga64/'</msg>
+<status status="PASS" starttime="20210914 08:28:15.272" endtime="20210914 08:28:18.108"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Gestão do Atendimento | Log in</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210914 08:28:18.120" level="INFO">Page title is 'Gestão do Atendimento | Log in'.</msg>
+<status status="PASS" starttime="20210914 08:28:18.109" endtime="20210914 08:28:18.121"/>
+</kw>
+<status status="PASS" starttime="20210914 08:28:15.272" endtime="20210914 08:28:18.121"/>
+</kw>
+<kw name="Digitar o login no campo &quot;Usuário&quot;" library="Resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=user</arg>
+<arg>${LOGIN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210914 08:28:18.128" level="INFO">Typing text 'automation' into text field 'name=user'.</msg>
+<status status="PASS" starttime="20210914 08:28:18.127" endtime="20210914 08:28:18.265"/>
+</kw>
+<status status="PASS" starttime="20210914 08:28:18.126" endtime="20210914 08:28:18.265"/>
+</kw>
+<kw name="Digitar o senha no campo &quot;Password&quot;" library="Resource">
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20210914 08:28:18.267" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg timestamp="20210914 08:28:18.326" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210914 08:28:18.381" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210914 08:28:18.266" endtime="20210914 08:28:18.381"/>
+</kw>
+<status status="PASS" starttime="20210914 08:28:18.266" endtime="20210914 08:28:18.382"/>
+</kw>
+<kw name="Clicar no botão entrar" library="Resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[contains(@type,'submit')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210914 08:28:18.384" level="INFO">Clicking element 'xpath=//button[contains(@type,'submit')]'.</msg>
+<status status="PASS" starttime="20210914 08:28:18.383" endtime="20210914 08:28:20.346"/>
+</kw>
+<status status="PASS" starttime="20210914 08:28:18.382" endtime="20210914 08:28:20.347"/>
+</kw>
+<kw name="Conferir se está na área logada" library="Resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${LOGIN} - Gestão do Atendimento</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210914 08:28:20.368" level="INFO">Page title is 'automation - Gestão do Atendimento'.</msg>
+<status status="PASS" starttime="20210914 08:28:20.351" endtime="20210914 08:28:20.368"/>
+</kw>
+<status status="PASS" starttime="20210914 08:28:20.350" endtime="20210914 08:28:20.369"/>
+</kw>
+<kw name="Fechar navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210914 08:28:20.370" endtime="20210914 08:28:22.763"/>
+</kw>
+<status status="PASS" starttime="20210914 08:28:20.370" endtime="20210914 08:28:22.764"/>
+</kw>
+<status status="PASS" starttime="20210914 08:28:12.810" endtime="20210914 08:28:22.764"/>
+</test>
+<status status="PASS" starttime="20210914 08:28:12.455" endtime="20210914 08:28:22.768"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestProceduralPractice sga">TestProceduralPractice sga</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
