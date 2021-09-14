@@ -43,6 +43,24 @@ Quando submeto meu login e senha
 Então devo ser direcionado para área logada
     Conferir se está na área logada
 
+Quando submeto um login não cadastrado
+    Input Text              id=userId   Jeff
+    Input Password          id=passId   ${PASSWORD}
+    Clicar no botão entrar
+
+Então devo receber um alerta: "O usuário informado não está cadastrado!"
+    Page Should Contain Element     xpath=//div[contains(@class,'flash error')]
+
+Quando submeto a senha incorreta
+    Input Text              id=userId   ${LOGIN}
+    Input Password          id=passId   asd123
+    Clicar no botão entrar
+
+Então devo receber um alerta: "Senha é invalida!"
+    Page Should Contain Element     xpath=//div[contains(@class,'flash error')]
+
+
+
 
 
 
