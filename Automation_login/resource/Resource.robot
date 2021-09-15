@@ -1,14 +1,6 @@
 *** Settings ***
 Library         SeleniumLibrary
-Library         FakerLibrary
-
-*** Variables ***
-${URL}              https://training-wheels-protocol.herokuapp.com/login
-${BROWSER}          chrome
-${LOGIN}            stark
-${PASSWORD}         jarvis!
-${FAKENAME}         FakerLibrary.Name
-${PASSWORDFAKE}     FakerLibrary.Password
+Library         FakerLibrary    locale=pt_BR
 
 *** Keywords ***
 #Setup e Teardown
@@ -19,45 +11,25 @@ Fechar navegador
     Close Browser
 
 #Teste passo-a-passo
-Acessar a página home do site
+Dado que acesso a página de login
     Go To                           ${URL}
     Page Should Contain Element     xpath=//i[contains(.,'Login')]
 
-Digitar o login no campo "Usuário"
+Quando submeto meu "${LOGIN}"
     Input Text              id=userId   ${LOGIN}
 
-Digitar o senha no campo "Password"
+Quando submeto minha "${PASSWORD}"
     Input Password          id=passId   ${PASSWORD}
-
-Clicar no botão entrar
-    Click Element           xpath=//i[contains(@class,'fa fa-2x fa-sign-in')]
-
-Conferir se está na área logada
-   Page Should Contain Element     xpath=//div[contains(@class,'flash success')]
-
-Dado que acesso a página de login
-    Acessar a página home do site
-
-Quando submeto meu login e senha
-    Digitar o login no campo "Usuário"
-    Digitar o senha no campo "Password"
-    Clicar no botão entrar
 
 Então devo ser direcionado para área logada
-    Conferir se está na área logada
-
-Quando submeto um login não cadastrado
-    Input Text              id=userId   ${FAKENAME}
-    Input Password          id=passId   ${PASSWORD}
-    Clicar no botão entrar
+    Click Element           xpath=//i[contains(@class,'fa fa-2x fa-sign-in')]
+    Page Should Contain Element     xpath=//div[contains(@class,'flash success')]
+    Sleep    2
 
 Então devo receber um alerta: "O usuário informado não está cadastrado!"
-    Page Should Contain Element     xpath=//div[contains(@class,'flash error')]
-
-Quando submeto a senha incorreta
-    Input Text              id=userId   ${LOGIN}
-    Input Password          id=passId   ${PASSWORDFAKE}
-    Clicar no botão entrar
+    Click Element           xpath=//i[contains(@class,'fa fa-2x fa-sign-in')]
+    Page Should Contain Element     xpath=//div[contains(@class,"flash error")]
 
 Então devo receber um alerta: "Senha é invalida!"
+    Click Element           xpath=//i[contains(@class,'fa fa-2x fa-sign-in')]
     Page Should Contain Element     xpath=//div[contains(@class,'flash error')]
