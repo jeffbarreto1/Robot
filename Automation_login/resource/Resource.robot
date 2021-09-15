@@ -17,7 +17,7 @@ Dado que acesso a página de login
 Quando submeto meu "${LOGIN}"
     Input Text              id=userId   ${LOGIN}
 
-Quando submeto minha "${PASSWORD}"
+E submeto minha "${PASSWORD}"
     Input Password          id=passId   ${PASSWORD}
 
 Então devo ser direcionado para área logada

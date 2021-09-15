@@ -8,17 +8,17 @@ Test Teardown   Fechar navegador
 Caso de Teste 01: Realizar login
     Dado que acesso a página de login
     Quando submeto meu "${LOGIN}"
-    Quando submeto minha "${PASSWORD}"
+    E submeto minha "${PASSWORD}"
     Então devo ser direcionado para área logada
 
 Caso de Teste 02: Usuário não cadastrado
     Dado que acesso a página de login
     Quando submeto meu "${NOMEFAKE}"
-    Quando submeto minha "${PASSWORDFAKE}"
+    E submeto minha "${PASSWORDFAKE}"
     Então devo receber um alerta: "O usuário informado não está cadastrado!"
 
 Caso de Teste 03: Senha inválida!
     Dado que acesso a página de login
     Quando submeto meu "${LOGIN}"
-    Quando submeto minha "${PASSWORDFAKE}"
+    E submeto minha "${PASSWORDFAKE}"
     Então devo receber um alerta: "Senha é invalida!"
