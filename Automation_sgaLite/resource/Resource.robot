@@ -63,7 +63,6 @@ E adiciono um novo "${MONITOR}"
     Click Element                           xpath=//span[@class='ng-binding ng-scope'][contains(.,'Açougue')]
     Click Element                           xpath=//button[contains(.,'Salvar')]
     Wait Until Element Is Not Visible       class=ng-binding
-
     
 Então devo encontrar o novo "${MONITOR}" cadastrado
     Wait Until Element Is Visible           xpath=//td[contains(.,'${KEY_MONITOR}')]
