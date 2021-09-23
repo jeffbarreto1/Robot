@@ -14,7 +14,7 @@ Dado que acesso a página de login
     Go To                           ${URL}
     Page Should Contain Element     xpath=//i[contains(.,'Login')]
 
-Quando submeto meu "${LOGIN}"
+Quando submeto meu }"${LOGIN}"
     Input Text              id=userId   ${LOGIN}
 
 E submeto minha "${PASSWORD}"

@@ -1,466 +1,461 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20210918 13:49:43.466" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20210923 07:55:38.008" rpa="false" schemaversion="2">
 <suite id="s1" name="Test sgaLite" source="C:\Users\SUPORTE IN9MÍDIA\Documents\Jefferson\Robot\Automation_sgaLite\tests\Test_sgaLite.robot">
 <kw name="Abrir navegador" library="Resource" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210918 13:49:43.811" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20210918 13:49:43.811" endtime="20210918 13:49:45.902"/>
+<msg timestamp="20210923 07:55:38.825" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210923 07:55:38.825" endtime="20210923 07:55:49.616"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:43.810" endtime="20210918 13:49:45.902"/>
+<status status="PASS" starttime="20210923 07:55:38.824" endtime="20210923 07:55:49.616"/>
 </kw>
 <test id="s1-t1" name="Caso de Teste 01: Realizar login">
 <kw name="Dado que acesso a página de login" library="Resource">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20210918 13:49:45.909" level="INFO">Opening url 'http://localhost:3000/'</msg>
-<status status="PASS" starttime="20210918 13:49:45.907" endtime="20210918 13:49:47.029"/>
+<msg timestamp="20210923 07:55:49.623" level="INFO">Opening url 'http://localhost:3000/'</msg>
+<status status="PASS" starttime="20210923 07:55:49.621" endtime="20210923 07:55:53.325"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210918 13:49:47.029" endtime="20210918 13:49:47.166"/>
+<status status="PASS" starttime="20210923 07:55:53.325" endtime="20210923 07:55:53.461"/>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <arg>name=login.form</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20210918 13:49:47.183" level="INFO">Current page contains element 'name=login.form'.</msg>
-<status status="PASS" starttime="20210918 13:49:47.167" endtime="20210918 13:49:47.183"/>
+<msg timestamp="20210923 07:55:53.485" level="INFO">Current page contains element 'name=login.form'.</msg>
+<status status="PASS" starttime="20210923 07:55:53.461" endtime="20210923 07:55:53.485"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:45.906" endtime="20210918 13:49:47.183"/>
+<status status="PASS" starttime="20210923 07:55:49.619" endtime="20210923 07:55:53.485"/>
 </kw>
 <kw name="Quando submeto meu &quot;${LOGIN}&quot;" library="Resource" sourcename="Quando submeto meu &quot;${LOGIN}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=login-user</arg>
 <arg>${LOGIN}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:47.186" level="INFO">Typing text 'admin' into text field 'id=login-user'.</msg>
-<status status="PASS" starttime="20210918 13:49:47.185" endtime="20210918 13:49:47.289"/>
+<msg timestamp="20210923 07:55:53.489" level="INFO">Typing text 'admin' into text field 'id=login-user'.</msg>
+<status status="PASS" starttime="20210923 07:55:53.488" endtime="20210923 07:55:53.620"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:47.184" endtime="20210918 13:49:47.289"/>
+<status status="PASS" starttime="20210923 07:55:53.487" endtime="20210923 07:55:53.620"/>
 </kw>
 <kw name="E submeto meu ${PASSWORD}" library="Resource" sourcename="E submeto meu ${PASSWORD}">
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id=login-password</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:47.292" level="INFO">Typing password into text field 'id=login-password'.</msg>
-<msg timestamp="20210918 13:49:47.353" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20210918 13:49:47.411" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20210918 13:49:47.291" endtime="20210918 13:49:47.412"/>
+<msg timestamp="20210923 07:55:53.623" level="INFO">Typing password into text field 'id=login-password'.</msg>
+<msg timestamp="20210923 07:55:53.679" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210923 07:55:53.740" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210923 07:55:53.622" endtime="20210923 07:55:53.740"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:47.290" endtime="20210918 13:49:47.412"/>
+<status status="PASS" starttime="20210923 07:55:53.621" endtime="20210923 07:55:53.740"/>
 </kw>
 <kw name="Então devo ser direcionado para área logada" library="Resource">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//button[contains(.,'Enviar')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:47.414" level="INFO">Clicking element 'xpath=//button[contains(.,'Enviar')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:47.413" endtime="20210918 13:49:47.487"/>
+<msg timestamp="20210923 07:55:53.742" level="INFO">Clicking element 'xpath=//button[contains(.,'Enviar')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:53.742" endtime="20210923 07:55:53.808"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath=//button[@type='button'][contains(.,'Alterar Senha')]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210918 13:49:47.488" endtime="20210918 13:49:47.654"/>
+<status status="PASS" starttime="20210923 07:55:53.809" endtime="20210923 07:55:54.364"/>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <arg>xpath=//h2[contains(.,'Início')]</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20210918 13:49:47.668" level="INFO">Current page contains element 'xpath=//h2[contains(.,'Início')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:47.654" endtime="20210918 13:49:47.669"/>
+<msg timestamp="20210923 07:55:54.380" level="INFO">Current page contains element 'xpath=//h2[contains(.,'Início')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:54.364" endtime="20210923 07:55:54.380"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:47.412" endtime="20210918 13:49:47.669"/>
+<status status="PASS" starttime="20210923 07:55:53.741" endtime="20210923 07:55:54.380"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:45.903" endtime="20210918 13:49:47.669"/>
+<status status="PASS" starttime="20210923 07:55:49.617" endtime="20210923 07:55:54.380"/>
 </test>
 <test id="s1-t2" name="Caso de Teste 02: Cadastrando Guichê">
-<kw name="Dado que clico em Cadastrar Guichê" library="Resource">
+<kw name="Dado que clico em &quot;Cadastrar Guichê&quot;" library="Resource" sourcename="Dado que clico em &quot;${CADASTRAR}&quot;">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//a[@ng-href='/counters'][contains(.,'Cadastrar Guichê')]</arg>
+<arg>xpath=//a[contains(.,'${CADASTRAR}')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:47.674" level="INFO">Clicking element 'xpath=//a[@ng-href='/counters'][contains(.,'Cadastrar Guichê')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:47.674" endtime="20210918 13:49:47.756"/>
+<msg timestamp="20210923 07:55:54.384" level="INFO">Clicking element 'xpath=//a[contains(.,'Cadastrar Guichê')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:54.384" endtime="20210923 07:55:54.462"/>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>xpath=//h2[contains(.,'Cadastrar Guichê')]</arg>
+<arg>xpath=//h2[contains(.,'${CADASTRAR}')]</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20210918 13:49:47.785" level="INFO">Current page contains element 'xpath=//h2[contains(.,'Cadastrar Guichê')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:47.756" endtime="20210918 13:49:47.785"/>
+<msg timestamp="20210923 07:55:54.485" level="INFO">Current page contains element 'xpath=//h2[contains(.,'Cadastrar Guichê')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:54.463" endtime="20210923 07:55:54.485"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:47.673" endtime="20210918 13:49:47.785"/>
+<status status="PASS" starttime="20210923 07:55:54.383" endtime="20210923 07:55:54.486"/>
 </kw>
 <kw name="E clico no botão Novo Guichê" library="Resource">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath=//button[contains(.,'Novo Guichê')]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210918 13:49:47.787" endtime="20210918 13:49:47.826"/>
+<status status="PASS" starttime="20210923 07:55:54.489" endtime="20210923 07:55:54.542"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//button[contains(.,'Novo Guichê')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:47.826" level="INFO">Clicking element 'xpath=//button[contains(.,'Novo Guichê')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:47.826" endtime="20210918 13:49:47.878"/>
+<msg timestamp="20210923 07:55:54.543" level="INFO">Clicking element 'xpath=//button[contains(.,'Novo Guichê')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:54.542" endtime="20210923 07:55:54.607"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>class=modal-body</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210918 13:49:47.878" endtime="20210918 13:49:47.977"/>
+<status status="PASS" starttime="20210923 07:55:54.608" endtime="20210923 07:55:54.702"/>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <arg>xpath=//span[contains(@class,'ng-scope')]</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20210918 13:49:47.993" level="INFO">Current page contains element 'xpath=//span[contains(@class,'ng-scope')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:47.977" endtime="20210918 13:49:47.993"/>
+<msg timestamp="20210923 07:55:54.733" level="INFO">Current page contains element 'xpath=//span[contains(@class,'ng-scope')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:54.703" endtime="20210923 07:55:54.734"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:47.786" endtime="20210918 13:49:47.994"/>
+<status status="PASS" starttime="20210923 07:55:54.487" endtime="20210923 07:55:54.734"/>
 </kw>
 <kw name="E crio um novo &quot;${GUICHE}&quot;" library="Resource" sourcename="E crio um novo &quot;${GUICHE}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=description</arg>
 <arg>${GUICHE}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:47.996" level="INFO">Typing text 'GUICHÊ 1' into text field 'name=description'.</msg>
-<status status="PASS" starttime="20210918 13:49:47.995" endtime="20210918 13:49:48.142"/>
+<msg timestamp="20210923 07:55:54.736" level="INFO">Typing text 'GUICHÊ 1' into text field 'name=description'.</msg>
+<status status="PASS" starttime="20210923 07:55:54.735" endtime="20210923 07:55:54.903"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//button[contains(.,'Salvar')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:48.143" level="INFO">Clicking element 'xpath=//button[contains(.,'Salvar')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:48.143" endtime="20210918 13:49:48.216"/>
+<msg timestamp="20210923 07:55:54.906" level="INFO">Clicking element 'xpath=//button[contains(.,'Salvar')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:54.904" endtime="20210923 07:55:54.983"/>
 </kw>
 <kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
 <arg>xpath=//button[contains(.,'Salvar')]</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20210918 13:49:48.217" endtime="20210918 13:49:48.482"/>
+<status status="PASS" starttime="20210923 07:55:54.984" endtime="20210923 07:55:56.028"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:47.994" endtime="20210918 13:49:48.482"/>
+<status status="PASS" starttime="20210923 07:55:54.734" endtime="20210923 07:55:56.028"/>
 </kw>
 <kw name="Então devo encontrar o novo &quot;${GUICHE}&quot; listado" library="Resource" sourcename="Então devo encontrar o novo &quot;${GUICHE}&quot; listado">
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <arg>xpath=//td[contains(.,'${GUICHE}')]</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20210918 13:49:48.526" level="INFO">Current page contains element 'xpath=//td[contains(.,'GUICHÊ 1')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:48.487" endtime="20210918 13:49:48.527"/>
+<msg timestamp="20210923 07:55:56.048" level="INFO">Current page contains element 'xpath=//td[contains(.,'GUICHÊ 1')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:56.030" endtime="20210923 07:55:56.049"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:48.485" endtime="20210918 13:49:48.527"/>
+<status status="PASS" starttime="20210923 07:55:56.029" endtime="20210923 07:55:56.049"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:47.672" endtime="20210918 13:49:48.528"/>
+<status status="PASS" starttime="20210923 07:55:54.382" endtime="20210923 07:55:56.049"/>
 </test>
 <test id="s1-t3" name="Caso de Teste 03: Cadastrando Monitor">
-<kw name="Dado que clico em Cadastrar Monitor" library="Resource">
+<kw name="Dado que clico em &quot;Cadastrar Monitor&quot;" library="Resource" sourcename="Dado que clico em &quot;${CADASTRAR}&quot;">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//a[contains(.,'Cadastrar Monitor')]</arg>
+<arg>xpath=//a[contains(.,'${CADASTRAR}')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:48.533" level="INFO">Clicking element 'xpath=//a[contains(.,'Cadastrar Monitor')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:48.533" endtime="20210918 13:49:48.613"/>
+<msg timestamp="20210923 07:55:56.053" level="INFO">Clicking element 'xpath=//a[contains(.,'Cadastrar Monitor')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:56.052" endtime="20210923 07:55:56.128"/>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>xpath=//h2[contains(.,'Cadastrar Monitor')]</arg>
+<arg>xpath=//h2[contains(.,'${CADASTRAR}')]</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20210918 13:49:48.643" level="INFO">Current page contains element 'xpath=//h2[contains(.,'Cadastrar Monitor')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:48.614" endtime="20210918 13:49:48.643"/>
+<msg timestamp="20210923 07:55:56.209" level="INFO">Current page contains element 'xpath=//h2[contains(.,'Cadastrar Monitor')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:56.129" endtime="20210923 07:55:56.209"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:48.532" endtime="20210918 13:49:48.644"/>
+<status status="PASS" starttime="20210923 07:55:56.052" endtime="20210923 07:55:56.209"/>
 </kw>
 <kw name="E clico no botão Novo Monitor" library="Resource">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath=//button[contains(.,'Novo Monitor')]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210918 13:49:48.645" endtime="20210918 13:49:48.676"/>
+<status status="PASS" starttime="20210923 07:55:56.211" endtime="20210923 07:55:56.238"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//button[contains(.,'Novo Monitor')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:48.677" level="INFO">Clicking element 'xpath=//button[contains(.,'Novo Monitor')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:48.676" endtime="20210918 13:49:48.774"/>
+<msg timestamp="20210923 07:55:56.239" level="INFO">Clicking element 'xpath=//button[contains(.,'Novo Monitor')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:56.238" endtime="20210923 07:55:56.348"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>class=modal-body</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210918 13:49:48.774" endtime="20210918 13:49:48.817"/>
+<status status="PASS" starttime="20210923 07:55:56.348" endtime="20210923 07:55:56.386"/>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <arg>name=url</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20210918 13:49:48.834" level="INFO">Current page contains element 'name=url'.</msg>
-<status status="PASS" starttime="20210918 13:49:48.817" endtime="20210918 13:49:48.834"/>
+<msg timestamp="20210923 07:55:56.406" level="INFO">Current page contains element 'name=url'.</msg>
+<status status="PASS" starttime="20210923 07:55:56.387" endtime="20210923 07:55:56.407"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:48.644" endtime="20210918 13:49:48.834"/>
+<status status="PASS" starttime="20210923 07:55:56.210" endtime="20210923 07:55:56.408"/>
 </kw>
 <kw name="E adiciono um novo &quot;${MONITOR}&quot;" library="Resource" sourcename="E adiciono um novo &quot;${MONITOR}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=description</arg>
 <arg>${MONITOR}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:48.836" level="INFO">Typing text 'NOVO_MONITOR' into text field 'name=description'.</msg>
-<status status="PASS" starttime="20210918 13:49:48.835" endtime="20210918 13:49:48.985"/>
+<msg timestamp="20210923 07:55:56.417" level="INFO">Typing text 'NOVO_MONITOR' into text field 'name=description'.</msg>
+<status status="PASS" starttime="20210923 07:55:56.415" endtime="20210923 07:55:56.645"/>
 </kw>
 <kw name="Clear Element Text" library="SeleniumLibrary">
 <arg>xpath=//input[contains(@type,'url')]</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20210918 13:49:48.985" endtime="20210918 13:49:49.061"/>
+<status status="PASS" starttime="20210923 07:55:56.646" endtime="20210923 07:55:56.721"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath=//input[contains(@type,'url')]</arg>
 <arg>${URL_MONITOR}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:49.063" level="INFO">Typing text 'http://192.168.1.24:1234/wsdl/INeoNewsTerminalService' into text field 'xpath=//input[contains(@type,'url')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:49.062" endtime="20210918 13:49:49.277"/>
+<msg timestamp="20210923 07:55:56.723" level="INFO">Typing text 'http://192.168.1.24:1234/wsdl/INeoNewsTerminalService' into text field 'xpath=//input[contains(@type,'url')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:56.722" endtime="20210923 07:55:56.949"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=key</arg>
 <arg>${KEY_MONITOR}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:49.278" level="INFO">Typing text '47871B33654034F0B829E0B47258E2B24E19ADDFF9F703F892FF39AD48F0C42ACA1BE6FB271F9743B1D32EC040A2EE5B7EF949EEA34D58D9824D18B396A1A9D1' into text field 'name=key'.</msg>
-<status status="PASS" starttime="20210918 13:49:49.278" endtime="20210918 13:49:49.630"/>
+<msg timestamp="20210923 07:55:56.950" level="INFO">Typing text '47871B33654034F0B829E0B47258E2B24E19ADDFF9F703F892FF39AD48F0C42ACA1BE6FB271F9743B1D32EC040A2EE5B7EF949EEA34D58D9824D18B396A1A9D1' into text field 'name=key'.</msg>
+<status status="PASS" starttime="20210923 07:55:56.950" endtime="20210923 07:55:57.309"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//input[contains(@type,'text')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:49.630" level="INFO">Clicking element 'xpath=//input[contains(@type,'text')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:49.630" endtime="20210918 13:49:49.708"/>
+<msg timestamp="20210923 07:55:57.310" level="INFO">Clicking element 'xpath=//input[contains(@type,'text')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:57.310" endtime="20210923 07:55:57.399"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//span[@class='ng-binding ng-scope'][contains(.,'Açougue')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:49.708" level="INFO">Clicking element 'xpath=//span[@class='ng-binding ng-scope'][contains(.,'Açougue')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:49.708" endtime="20210918 13:49:49.791"/>
+<msg timestamp="20210923 07:55:57.400" level="INFO">Clicking element 'xpath=//span[@class='ng-binding ng-scope'][contains(.,'Açougue')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:57.399" endtime="20210923 07:55:57.484"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//button[contains(.,'Salvar')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:49.793" level="INFO">Clicking element 'xpath=//button[contains(.,'Salvar')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:49.792" endtime="20210918 13:49:49.850"/>
+<msg timestamp="20210923 07:55:57.485" level="INFO">Clicking element 'xpath=//button[contains(.,'Salvar')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:57.485" endtime="20210923 07:55:57.542"/>
 </kw>
 <kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
 <arg>class=ng-binding</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20210918 13:49:49.850" endtime="20210918 13:49:49.878"/>
+<status status="PASS" starttime="20210923 07:55:57.542" endtime="20210923 07:55:57.575"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:48.835" endtime="20210918 13:49:49.879"/>
+<status status="PASS" starttime="20210923 07:55:56.413" endtime="20210923 07:55:57.575"/>
 </kw>
 <kw name="Então devo encontrar o novo &quot;${MONITOR}&quot; cadastrado" library="Resource" sourcename="Então devo encontrar o novo &quot;${MONITOR}&quot; cadastrado">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath=//td[contains(.,'${KEY_MONITOR}')]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210918 13:49:49.881" endtime="20210918 13:49:50.132"/>
+<status status="PASS" starttime="20210923 07:55:57.579" endtime="20210923 07:55:57.863"/>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <arg>xpath=//td[contains(.,'${KEY_MONITOR}')]</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20210918 13:49:50.140" level="INFO">Current page contains element 'xpath=//td[contains(.,'47871B33654034F0B829E0B47258E2B24E19ADDFF9F703F892FF39AD48F0C42ACA1BE6FB271F9743B1D32EC040A2EE5B7EF949EEA34D58D9824D18B396A1A9D1')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:50.132" endtime="20210918 13:49:50.140"/>
+<msg timestamp="20210923 07:55:57.871" level="INFO">Current page contains element 'xpath=//td[contains(.,'47871B33654034F0B829E0B47258E2B24E19ADDFF9F703F892FF39AD48F0C42ACA1BE6FB271F9743B1D32EC040A2EE5B7EF949EEA34D58D9824D18B396A1A9D1')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:57.863" endtime="20210923 07:55:57.871"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:49.880" endtime="20210918 13:49:50.141"/>
+<status status="PASS" starttime="20210923 07:55:57.577" endtime="20210923 07:55:57.871"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:48.531" endtime="20210918 13:49:50.142"/>
+<status status="PASS" starttime="20210923 07:55:56.051" endtime="20210923 07:55:57.872"/>
 </test>
 <test id="s1-t4" name="Caso de Teste 04: Cadastrando Serviço">
-<kw name="Dado que clico em Cadastrar Serviço" library="Resource">
+<kw name="Dado que clico em &quot;Cadastrar Serviço&quot;" library="Resource" sourcename="Dado que clico em &quot;${CADASTRAR}&quot;">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//a[contains(.,'Cadastrar Serviço')]</arg>
+<arg>xpath=//a[contains(.,'${CADASTRAR}')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:50.147" level="INFO">Clicking element 'xpath=//a[contains(.,'Cadastrar Serviço')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:50.146" endtime="20210918 13:49:50.221"/>
+<msg timestamp="20210923 07:55:57.877" level="INFO">Clicking element 'xpath=//a[contains(.,'Cadastrar Serviço')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:57.876" endtime="20210923 07:55:57.948"/>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>xpath=//h2[contains(.,'Cadastrar Serviço')]</arg>
+<arg>xpath=//h2[contains(.,'${CADASTRAR}')]</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20210918 13:49:50.244" level="INFO">Current page contains element 'xpath=//h2[contains(.,'Cadastrar Serviço')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:50.222" endtime="20210918 13:49:50.245"/>
+<msg timestamp="20210923 07:55:57.977" level="INFO">Current page contains element 'xpath=//h2[contains(.,'Cadastrar Serviço')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:57.949" endtime="20210923 07:55:57.977"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:50.146" endtime="20210918 13:49:50.245"/>
+<status status="PASS" starttime="20210923 07:55:57.875" endtime="20210923 07:55:57.977"/>
 </kw>
 <kw name="E clico no botão Novo Serviço" library="Resource">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath=//button[@type='button'][contains(.,'Novo Serviço')]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210918 13:49:50.248" endtime="20210918 13:49:50.548"/>
+<status status="PASS" starttime="20210923 07:55:57.979" endtime="20210923 07:55:58.004"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//button[@type='button'][contains(.,'Novo Serviço')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:50.549" level="INFO">Clicking element 'xpath=//button[@type='button'][contains(.,'Novo Serviço')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:50.548" endtime="20210918 13:49:50.671"/>
+<msg timestamp="20210923 07:55:58.005" level="INFO">Clicking element 'xpath=//button[@type='button'][contains(.,'Novo Serviço')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:58.005" endtime="20210923 07:55:58.113"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>class=modal-body</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210918 13:49:50.671" endtime="20210918 13:49:50.709"/>
+<status status="PASS" starttime="20210923 07:55:58.114" endtime="20210923 07:55:58.167"/>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <arg>name=callText</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20210918 13:49:50.726" level="INFO">Current page contains element 'name=callText'.</msg>
-<status status="PASS" starttime="20210918 13:49:50.710" endtime="20210918 13:49:50.727"/>
+<msg timestamp="20210923 07:55:58.186" level="INFO">Current page contains element 'name=callText'.</msg>
+<status status="PASS" starttime="20210923 07:55:58.168" endtime="20210923 07:55:58.187"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:50.246" endtime="20210918 13:49:50.727"/>
+<status status="PASS" starttime="20210923 07:55:57.978" endtime="20210923 07:55:58.187"/>
 </kw>
 <kw name="E cadastro um novo &quot;${SERVIÇO}&quot;" library="Resource" sourcename="E cadastro um novo &quot;${SERVIÇO}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=description</arg>
 <arg>${SERVIÇO}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:50.729" level="INFO">Typing text 'NOVO_SERVIÇO1' into text field 'name=description'.</msg>
-<status status="PASS" starttime="20210918 13:49:50.728" endtime="20210918 13:49:50.895"/>
+<msg timestamp="20210923 07:55:58.189" level="INFO">Typing text 'NOVO_SERVIÇO1' into text field 'name=description'.</msg>
+<status status="PASS" starttime="20210923 07:55:58.189" endtime="20210923 07:55:58.364"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=abbreviation</arg>
 <arg>${SIGLA}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:50.896" level="INFO">Typing text 'AUT' into text field 'name=abbreviation'.</msg>
-<status status="PASS" starttime="20210918 13:49:50.895" endtime="20210918 13:49:51.044"/>
+<msg timestamp="20210923 07:55:58.365" level="INFO">Typing text 'AUT' into text field 'name=abbreviation'.</msg>
+<status status="PASS" starttime="20210923 07:55:58.364" endtime="20210923 07:55:58.520"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//input[contains(@type,'text')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:51.045" level="INFO">Clicking element 'xpath=//input[contains(@type,'text')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:51.044" endtime="20210918 13:49:51.123"/>
+<msg timestamp="20210923 07:55:58.520" level="INFO">Clicking element 'xpath=//input[contains(@type,'text')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:58.520" endtime="20210923 07:55:58.604"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//span[@class='ng-binding ng-scope'][contains(.,'${MONITOR}')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:51.124" level="INFO">Clicking element 'xpath=//span[@class='ng-binding ng-scope'][contains(.,'NOVO_MONITOR')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:51.123" endtime="20210918 13:49:51.212"/>
+<msg timestamp="20210923 07:55:58.605" level="INFO">Clicking element 'xpath=//span[@class='ng-binding ng-scope'][contains(.,'NOVO_MONITOR')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:58.604" endtime="20210923 07:55:58.704"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//button[contains(.,'Salvar')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:51.212" level="INFO">Clicking element 'xpath=//button[contains(.,'Salvar')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:51.212" endtime="20210918 13:49:51.267"/>
+<msg timestamp="20210923 07:55:58.705" level="INFO">Clicking element 'xpath=//button[contains(.,'Salvar')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:58.704" endtime="20210923 07:55:58.783"/>
 </kw>
 <kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
 <arg>class=ng-binding</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20210918 13:49:51.268" endtime="20210918 13:49:51.296"/>
+<status status="PASS" starttime="20210923 07:55:58.784" endtime="20210923 07:55:58.813"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:50.727" endtime="20210918 13:49:51.296"/>
+<status status="PASS" starttime="20210923 07:55:58.188" endtime="20210923 07:55:58.813"/>
 </kw>
 <kw name="Então devo encontrar o novo &quot;${SERVIÇO}&quot;" library="Resource" sourcename="Então devo encontrar o novo &quot;${SERVIÇO}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath=//td[contains(.,'${SERVIÇO}')]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210918 13:49:51.298" endtime="20210918 13:49:51.618"/>
+<status status="PASS" starttime="20210923 07:55:58.815" endtime="20210923 07:55:59.317"/>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <arg>xpath=//td[contains(.,'${SERVIÇO}')]</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20210918 13:49:51.627" level="INFO">Current page contains element 'xpath=//td[contains(.,'NOVO_SERVIÇO1')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:51.618" endtime="20210918 13:49:51.627"/>
+<msg timestamp="20210923 07:55:59.345" level="INFO">Current page contains element 'xpath=//td[contains(.,'NOVO_SERVIÇO1')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:59.318" endtime="20210923 07:55:59.345"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:51.297" endtime="20210918 13:49:51.628"/>
+<status status="PASS" starttime="20210923 07:55:58.814" endtime="20210923 07:55:59.346"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:50.144" endtime="20210918 13:49:51.629"/>
+<status status="PASS" starttime="20210923 07:55:57.874" endtime="20210923 07:55:59.348"/>
 </test>
 <test id="s1-t5" name="Caso de Teste 05: Realizando uma chamada">
-<kw name="Dado que clico em Chamar Senha Avulsa" library="Resource">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=//a[contains(.,'Chamar Senha Avulsa')]</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210918 13:49:51.633" endtime="20210918 13:49:51.667"/>
-</kw>
+<kw name="Dado que clico em &quot;Chamar Senha Avulsa&quot;" library="Resource" sourcename="Dado que clico em &quot;${CADASTRAR}&quot;">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//a[contains(.,'Chamar Senha Avulsa')]</arg>
+<arg>xpath=//a[contains(.,'${CADASTRAR}')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:51.668" level="INFO">Clicking element 'xpath=//a[contains(.,'Chamar Senha Avulsa')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:51.667" endtime="20210918 13:49:51.729"/>
+<msg timestamp="20210923 07:55:59.360" level="INFO">Clicking element 'xpath=//a[contains(.,'Chamar Senha Avulsa')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:59.358" endtime="20210923 07:55:59.486"/>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>xpath=//h2[contains(.,'Chamar Senha Avulsa')]</arg>
+<arg>xpath=//h2[contains(.,'${CADASTRAR}')]</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20210918 13:49:51.760" level="INFO">Current page contains element 'xpath=//h2[contains(.,'Chamar Senha Avulsa')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:51.730" endtime="20210918 13:49:51.761"/>
+<msg timestamp="20210923 07:55:59.505" level="INFO">Current page contains element 'xpath=//h2[contains(.,'Chamar Senha Avulsa')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:59.486" endtime="20210923 07:55:59.505"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:51.632" endtime="20210918 13:49:51.761"/>
+<status status="PASS" starttime="20210923 07:55:59.357" endtime="20210923 07:55:59.506"/>
 </kw>
 <kw name="E seleciono um Guichê" library="Resource">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>id=keyboard-counter</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210918 13:49:51.763" endtime="20210918 13:49:52.066"/>
+<status status="PASS" starttime="20210923 07:55:59.507" endtime="20210923 07:55:59.757"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//select[contains(@id,'keyboard-counter')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:52.068" level="INFO">Clicking element 'xpath=//select[contains(@id,'keyboard-counter')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:52.067" endtime="20210918 13:49:52.143"/>
+<msg timestamp="20210923 07:55:59.758" level="INFO">Clicking element 'xpath=//select[contains(@id,'keyboard-counter')]'.</msg>
+<status status="PASS" starttime="20210923 07:55:59.758" endtime="20210923 07:55:59.879"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//*[@id="keyboard-counter"]/option[1]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:52.145" level="INFO">Clicking element 'xpath=//*[@id="keyboard-counter"]/option[1]'.</msg>
-<status status="PASS" starttime="20210918 13:49:52.144" endtime="20210918 13:49:52.200"/>
+<msg timestamp="20210923 07:55:59.881" level="INFO">Clicking element 'xpath=//*[@id="keyboard-counter"]/option[1]'.</msg>
+<status status="PASS" starttime="20210923 07:55:59.880" endtime="20210923 07:55:59.986"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:51.762" endtime="20210918 13:49:52.200"/>
+<status status="PASS" starttime="20210923 07:55:59.506" endtime="20210923 07:55:59.987"/>
 </kw>
 <kw name="E Seleciono um Serviço" library="Resource">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id=keyboard-service</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:52.202" level="INFO">Clicking element 'id=keyboard-service'.</msg>
-<status status="PASS" starttime="20210918 13:49:52.201" endtime="20210918 13:49:52.306"/>
+<msg timestamp="20210923 07:55:59.988" level="INFO">Clicking element 'id=keyboard-service'.</msg>
+<status status="PASS" starttime="20210923 07:55:59.988" endtime="20210923 07:56:00.106"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//*[@id="keyboard-service"]/option[1]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:52.307" level="INFO">Clicking element 'xpath=//*[@id="keyboard-service"]/option[1]'.</msg>
-<status status="PASS" starttime="20210918 13:49:52.306" endtime="20210918 13:49:52.369"/>
+<msg timestamp="20210923 07:56:00.108" level="INFO">Clicking element 'xpath=//*[@id="keyboard-service"]/option[1]'.</msg>
+<status status="PASS" starttime="20210923 07:56:00.107" endtime="20210923 07:56:00.182"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:52.201" endtime="20210918 13:49:52.370"/>
+<status status="PASS" starttime="20210923 07:55:59.987" endtime="20210923 07:56:00.182"/>
 </kw>
 <kw name="E digito uma Senha" library="Resource">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id=keyboard-number</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:52.371" level="INFO">Clicking element 'id=keyboard-number'.</msg>
-<status status="PASS" starttime="20210918 13:49:52.371" endtime="20210918 13:49:52.485"/>
+<msg timestamp="20210923 07:56:00.185" level="INFO">Clicking element 'id=keyboard-number'.</msg>
+<status status="PASS" starttime="20210923 07:56:00.184" endtime="20210923 07:56:00.370"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=keyboard-number</arg>
 <arg>${SENHA}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:52.485" level="INFO">Typing text '0' into text field 'id=keyboard-number'.</msg>
-<status status="PASS" starttime="20210918 13:49:52.485" endtime="20210918 13:49:52.588"/>
+<msg timestamp="20210923 07:56:00.371" level="INFO">Typing text '0' into text field 'id=keyboard-number'.</msg>
+<status status="PASS" starttime="20210923 07:56:00.371" endtime="20210923 07:56:00.469"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:52.370" endtime="20210918 13:49:52.588"/>
+<status status="PASS" starttime="20210923 07:56:00.183" endtime="20210923 07:56:00.469"/>
 </kw>
 <kw name="E digito o nome a ser chamado" library="Resource">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id=keyboard-number</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:52.590" level="INFO">Clicking element 'id=keyboard-number'.</msg>
-<status status="PASS" starttime="20210918 13:49:52.589" endtime="20210918 13:49:52.643"/>
+<msg timestamp="20210923 07:56:00.471" level="INFO">Clicking element 'id=keyboard-number'.</msg>
+<status status="PASS" starttime="20210923 07:56:00.471" endtime="20210923 07:56:00.504"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=keyboard-name</arg>
 <arg>${NAME_CHAMADA}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:52.644" level="INFO">Typing text 'JEFFERSON' into text field 'id=keyboard-name'.</msg>
-<status status="PASS" starttime="20210918 13:49:52.643" endtime="20210918 13:49:52.779"/>
+<msg timestamp="20210923 07:56:00.505" level="INFO">Typing text 'JEFFERSON' into text field 'id=keyboard-name'.</msg>
+<status status="PASS" starttime="20210923 07:56:00.505" endtime="20210923 07:56:00.632"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:52.589" endtime="20210918 13:49:52.779"/>
+<status status="PASS" starttime="20210923 07:56:00.470" endtime="20210923 07:56:00.633"/>
 </kw>
 <kw name="Então clico no botão Enviar" library="Resource">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//button[contains(.,'Enviar')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210918 13:49:52.783" level="INFO">Clicking element 'xpath=//button[contains(.,'Enviar')]'.</msg>
-<status status="PASS" starttime="20210918 13:49:52.782" endtime="20210918 13:49:52.844"/>
+<msg timestamp="20210923 07:56:00.636" level="INFO">Clicking element 'xpath=//button[contains(.,'Enviar')]'.</msg>
+<status status="PASS" starttime="20210923 07:56:00.635" endtime="20210923 07:56:00.706"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:52.781" endtime="20210918 13:49:52.844"/>
+<status status="PASS" starttime="20210923 07:56:00.634" endtime="20210923 07:56:00.707"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:51.631" endtime="20210918 13:49:52.848"/>
+<status status="PASS" starttime="20210923 07:55:59.354" endtime="20210923 07:56:00.707"/>
 </test>
 <kw name="Fechar navegador" library="Resource" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210918 13:49:52.854" endtime="20210918 13:49:55.243"/>
+<status status="PASS" starttime="20210923 07:56:00.711" endtime="20210923 07:56:03.263"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:52.853" endtime="20210918 13:49:55.243"/>
+<status status="PASS" starttime="20210923 07:56:00.710" endtime="20210923 07:56:03.264"/>
 </kw>
-<status status="PASS" starttime="20210918 13:49:43.468" endtime="20210918 13:49:55.244"/>
+<status status="PASS" starttime="20210923 07:55:38.011" endtime="20210923 07:56:03.264"/>
 </suite>
 <statistics>
 <total>
