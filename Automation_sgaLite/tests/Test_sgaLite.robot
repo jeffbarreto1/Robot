@@ -34,6 +34,6 @@ Caso de Teste 05: Realizando uma chamada
     Dado que clico em "Chamar Senha Avulsa"
     E seleciono um Guichê
     E Seleciono um Serviço
-    E digito uma Senha
-    E digito o nome a ser chamado
+    E digito uma Senha: "0"
+    E digito o nome a ser chamado: "Jefferson"
     Então clico no botão Enviar
