@@ -16,5 +16,5 @@
   - Robot Framework instalado
 
 ## Assista o Robot agindo
-  ![automacao_sgaLite](https://)
-  [Veja no YouTube](https://youtu.be/O2-f5MVgVco)
+  [![Watch the video](https://img.youtube.com/vi/O2-f5MVgVco/maxresdefault.jpg)](https://youtu.be/O2-f5MVgVco)
+  Clique na imagem para ser direcionado ao vídeo no YouTube.
