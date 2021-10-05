@@ -1,0 +1,12 @@
+*** Settings ***
+Library         SeleniumLibrary
+
+*** Keywords ***
+#Setup e Teardown
+Abrir navegador
+    Open Browser    about:blank  ${BROWSER}
+
+Fechar navegador
+    Close Browser
+
+#Realizando a automatização
