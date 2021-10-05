@@ -7,21 +7,21 @@ Test Teardown   Fechar navegador
 *** Test Cases ***
 
 Caso de Teste 01: Pesquisando um produto válido
-    Dado que acesso a página home do site
-    Quando pesquiso pela oferta "Xbox Series S"
-    E clico no produto pesquisado
-    E Clico em comprar
-    Então devo ser direcionado para realizar login
+    Given que acesso a página home do site
+    When pesquiso pela oferta "Xbox Series S"
+    And clico no produto pesquisado
+    And Clico em comprar
+    Then devo ser direcionado para realizar login
 
 Caso de Teste 02: Pesquisando outro produto válido
-    Dado que acesso a página home do site
-    Quando pesquiso pela oferta "Mouse Bluetooth"
-    E clico no produto pesquisado
-    E Clico em comprar
-    Então devo ser direcionado para realizar login
+    Given que acesso a página home do site
+    When pesquiso pela oferta "Mouse Bluetooth"
+    And clico no produto pesquisado
+    And Clico em comprar
+    Then devo ser direcionado para realizar login
 
 Caso de Teste 03: Pesquisando um produto inválido
-    Dado que acesso a página home do site
-    Quando pesquiso pela oferta errada "Produto que não existe"
-    Então devo encontrar um alerta de produto não encontrado
+    Given que acesso a página home do site
+    When pesquiso pela oferta errada "Produto que não existe"
+    Then devo encontrar um alerta de produto não encontrado
 

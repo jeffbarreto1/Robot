@@ -10,24 +10,24 @@ Fechar navegador
     Close Browser
 
 #Realizando a automatização
-Dado que acesso a página home do site
+Given que acesso a página home do site
     Go To   ${URL}  
     Maximize Browser Window
     Wait Until Element Is Visible       ${ID_LOGO}    
     Title Should Be                     ${TITLE}
     
-Quando pesquiso pela oferta "${OFERTA}"
+When pesquiso pela oferta "${OFERTA}"
     Input Text                          ${INPUT_BUSCA}    ${OFERTA}
     Click Element                       ${BOTAO_BUSCAR}
     Wait Until Element Is Visible       ${ELEMENTO_VOCEPESQUISOU}
     Page Should Contain Element         ${ELEMENTO_ORDENACAO} 
 
-E clico no produto pesquisado
+And clico no produto pesquisado
     Click Element                   ${IMAGEM_CLICK}
     Wait Until Element Is Visible   ${BLOCO_VALORES}
     Page Should Contain Element     ${INPUT_FRETE}
 
-E Clico em comprar
+And Clico em comprar
     Click Element                   ${BOTAO_COMPRAR}
     Wait Until Element Is Visible   ${ELEMENTO_ADDCARRINHO}
     Wait Until Element Is Visible   ${BOTAO_GOCARRINHO}
@@ -35,14 +35,14 @@ E Clico em comprar
     Wait Until Element Is Visible   ${ELEMENTO_PASSOSCHACKOUT}
     Click Element                   ${BOTAO_GOPAGAMENTO}
     
-Então devo ser direcionado para realizar login
+Then devo ser direcionado para realizar login
     Wait Until Element Is Visible     ${ELEMENTO_ID}
     Page Should Contain Element       ${FORM_LOGIN}
 
-Quando pesquiso pela oferta errada "${OFERTA}"
+When pesquiso pela oferta errada "${OFERTA}"
     Input Text      ${INPUT_BUSCA}     ${OFERTA}
     Click Element   ${BOTAO_BUSCAR}
 
-Então devo encontrar um alerta de produto não encontrado
+Then devo encontrar um alerta de produto não encontrado
     Wait Until Element Is Visible     ${ELEMENTO_NOTFOUND}
     Page Should Contain Element       ${LOCATOR_NOTFOUND}
